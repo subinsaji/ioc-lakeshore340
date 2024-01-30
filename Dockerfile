@@ -26,6 +26,13 @@ RUN iocStats/install.sh 3.1.16
 
 ################################################################################
 #  TODO - Add further support module installations here
+
+COPY ibek-support/asyn/ asyn/
+RUN asyn/install.sh R4-42
+
+COPY ibek-support/StreamDevice/ StreamDevice/
+RUN StreamDevice/install.sh 2.8.24
+
 ################################################################################
 
 # get the ioc source and build it
