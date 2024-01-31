@@ -33,6 +33,10 @@ RUN asyn/install.sh R4-42
 COPY ibek-support/StreamDevice/ StreamDevice/
 RUN StreamDevice/install.sh 2.8.24
 
+COPY ibek-support/lakeshore340/ lakeshore340/
+RUN lakeshore340/install.sh 2-6-2
+
+
 ################################################################################
 
 # get the ioc source and build it
